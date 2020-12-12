@@ -5,21 +5,21 @@ horse = False
 gun = True
 ammo = 20
 import sys
-#from PIL import Image
+from PIL import Image
 
 #read the image
-#im = Image.open("IceWorld.jpg") # check
-#im1 = Image.open("Wolves.jpg") #chech
-#im2 = Image.open("Store.jpg") #check
-#im3 = Image.open("ManinStore.jpg") #check
-#im4 = Image.open("Bandit1.png") #CHECK
-#im5 = Image.open("Bandit2.jpg") #CHECK
-#im6 = Image.open("Bandit3.jpeg") #CHECK
-#im7 = Image.open("Deer.png") #CHECK
-#im8 = Image.open("Crying-Child.jpg") #CHECK
-#im9 = Image.open("FrozenRiver.jpg") #CHECK
-#im10 = Image.open("Cabin.jpg") #CHECK
-#im11 = Image.open("Farm.jpg") #Check
+im = Image.open("IceWorld.jpg") # check
+im1 = Image.open("Wolves.jpg") #chech
+im2 = Image.open("Store.jpg") #check
+im3 = Image.open("ManinStore.jpg") #check
+im4 = Image.open("Bandit1.png") #CHECK
+im5 = Image.open("Bandit2.jpg") #CHECK
+im6 = Image.open("Bandit3.jpeg") #CHECK
+im7 = Image.open("Deer.png") #CHECK
+im8 = Image.open("Crying-Child.jpg") #CHECK
+im9 = Image.open("FrozenRiver.jpg") #CHECK
+im10 = Image.open("Cabin.jpg") #CHECK
+im11 = Image.open("Farm.jpg") #Check
 def supplies():
     print("")
     if car == True: 
@@ -48,7 +48,7 @@ time.sleep(2)
 # Ubuntu version 10.10
 os.system('clear')
 #
-#im.show()
+im.show()
 supplies()
 print("Background: The world has been taken by storm, as a sudden spike in the global temperature causes extremely polar temperatures. The equator is around 150 Degrees Fahrenheit on average while areas like southern Canada are less than -80 in the summer. This has led to an extreme shortage of available land to live on.")
 print("This apocalypse causes what is basically the breakdown of all government systems, leaving every man, woman and child to fend for themself. Due to this, the world is in total anarchy, with groups of anarchists traveling around robbing and killing any people they see. ")
@@ -191,7 +191,7 @@ if car == False:
     print("While traveling south, you are startled by a pack of wolves about 100 yards from you. One notices you, so now you must decide your next course of action")
     print("You know that the wolves are especially dangerous since there has been a mass migration of herbivores towards the equator, meaning that predators up north are starving and extremely dangerous for humans")
     wolves = True
-    #im1.show()
+    im1.show()
 else: 
     wolves = False
 #Wolves Encounter
@@ -266,7 +266,7 @@ if car == False:
     os.system('clear')   
     supplies()
 #Store Encounter
-#im2.show()
+im2.show()
 print("You find that you are running out of food. You come across what looks like an abandoned Store")
 if horse == True:
     print("Your horse is starving as well, so it will need to be fed soon")
@@ -285,7 +285,7 @@ while(enter == True):
                      answertrue = True       
                      
          if Answer1 == "A":
-            #im3.show()
+            im3.show()
             if car == True:
                 print("You exit the car and enter the store. You find a man living there, clearly a bit mad. You see he has amassed items from the store that could prove useful, including a bit of ammo. You NEED food and some gas")
             if horse == True:
@@ -301,7 +301,7 @@ while(enter == True):
                 print("You find that you do not have the ammo necessary to get a decent amount of meat, must make use of the store")
                 Store = True
                 enter = False
-             #im7.show()
+             im7.show()
              ammo = ammo - 3
              print("You manage to hunt for food, but are unable to find any plants, you do find animals to kill")
              if horse == True:
@@ -637,9 +637,9 @@ print("During you travels, you are ambushed by a group of bandits. This is one o
 print("From reports you have heard on the radio, you know that they worship battle, as they believe that is the only way to appease their god, or else the Eternal Freeze will continue...")
 print("They surround you, and one massive man steps out unarmed from a car to fight you. What do you do?")
 bandits = True
-#im4.show()
-#im5.show()
-#im6.show()
+im4.show()
+im5.show()
+im6.show()
 
 while(bandits == True):
          Answer1 = (input("How do you respond? \nA: Attempt to escape \nB: Fight\nC: Talk it out\n"))
@@ -752,7 +752,7 @@ time.sleep(10)
 os.system('clear')
 
 supplies()
-#im9.show()
+im9.show()
 print("You now feel that the temperature is beginning to become more 'normal'.")
 print("You now come to a river that is frozen over. You cannot see how thick the freeze is, but it is going to be dangerous to cross.")
 river = True
@@ -806,7 +806,7 @@ time.sleep(10)
 os.system('clear')
 
 supplies()
-#im10.show()
+im10.show()
 print("Now you are in the inhabitable areas. You notice that there is a crazy variety of animals.")
 print("It feels like everywhere you look there is something fighting something for space. Elk fighting moose, bobcats fighting lynx, coyotes fighting wolves. It feels like this apocalypse has brought the environment as well as society to an all out war for space")
 print("You also find what appears to be a battlefield, with big spots of ash and broken trees signalling that a significant conflict occured there.")
@@ -836,7 +836,7 @@ time.sleep(10)
 os.system('clear')
 
 supplies()
-#im8.show()
+im8.show()
 print("During your travels, you encounter a lone child. The girl looks to be around 12 years old.")
 print("The child is alone and crying. You can examine the area around to check for traps if you would like, or you can just walk up to her, or you can run away.")
 Answer1 = (input("Options: \nA: Check \nB: Go right in\nC: Continue on\n"))
