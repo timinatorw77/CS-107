@@ -20,6 +20,9 @@ im8 = Image.open("Crying-Child.jpg") #CHECK
 im9 = Image.open("FrozenRiver.jpg") #CHECK
 im10 = Image.open("Cabin.jpg") #CHECK
 im11 = Image.open("Farm.jpg") #Check
+        
+import os
+import time
 def supplies():
     print("")
     if car == True: 
@@ -40,13 +43,25 @@ def supplies():
                 print("You have", ammo, "bullets")
             else: print()
             
-import os
-import time
+def keepgoin():
+    Answer = (input("ENTER A TO CONTINUE\n"))
+    if (Answer == "A"):
+        answertrue = True
+    else:
+        answertrue = False
+        while answertrue == False:
+            Answer = (input("Answer must be A, try again: "))
+            if (Answer1 == "A"):
+                answertrue = True                     
+    if Answer1 == "A":
+        print("Continue")
+        time.sleep(2)
+        # Ubuntu version 10.10
+        os.system('clear')
+
 # for windows
 # os.system('cls')
-time.sleep(2)
-# Ubuntu version 10.10
-os.system('clear')
+
 #
 im.show()
 supplies()
@@ -179,10 +194,7 @@ while(blizzard == True):
 
 
 
-
-time.sleep(7)
-# Ubuntu version 10.10
-os.system('clear')
+keepgoin()
 
 
 
@@ -261,10 +273,7 @@ while(wolves == True):
       
       
 if car == False:
-    time.sleep(7)
-    # Ubuntu version 10.10
-    os.system('clear')   
-    supplies()
+    keepgoin()
 #Store Encounter
 im2.show()
 print("You find that you are running out of food. You come across what looks like an abandoned Store")
@@ -625,10 +634,7 @@ while Store == True:
                  Store = False
                  
                  
-time.sleep(6)
-# Ubuntu version 10.10
-os.system('clear')
-
+keepgoin()
 supplies()
 
 
@@ -747,9 +753,7 @@ while(bandits == True):
 
 
 
-time.sleep(7)
-# Ubuntu version 10.10
-os.system('clear')
+keepgoin()
 
 supplies()
 im9.show()
@@ -801,9 +805,7 @@ while(river == True):
              horse = False
          river = False
 
-time.sleep(6)
-# Ubuntu version 10.10
-os.system('clear')
+keepgoin()
 
 supplies()
 im10.show()
@@ -909,9 +911,7 @@ elif Answer1 == "C":
     companion = False
     
 
-time.sleep(6)
-# Ubuntu version 10.10
-os.system('clear')
+keepgoin()
 
 supplies()
 
