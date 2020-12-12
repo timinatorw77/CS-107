@@ -661,7 +661,7 @@ while(bandits == True):
                 sys.exit("You Die. GAME OVER")
              
          elif Answer1 == "B":
-             Answer2 = (input("You now have to fight this person one on one. Will you \nA:Fight dirty, with weapons\nB: try to fight fair: "))
+             Answer2 = (input("You now have to fight this person one on one. Will you \nA: Fight fairly\nB: Fight Dirty, with weapons\n"))
              answer2true = False
              if (Answer2 == "A") | (Answer2 == "B"):
                 answer2true = True
@@ -839,7 +839,7 @@ supplies()
 #im8.show()
 print("During your travels, you encounter a lone child. The girl looks to be around 12 years old.")
 print("The child is alone and crying. You can examine the area around to check for traps if you would like, or you can just walk up to her, or you can run away.")
-Answer1 = (input("Options: \nA:Check \nB: Go right in\nC: Continue on\n"))
+Answer1 = (input("Options: \nA: Check \nB: Go right in\nC: Continue on\n"))
 if (Answer1 == "A") | (Answer1 == "B") | (Answer1 == "C"):
     answertrue = True
 else:
@@ -851,7 +851,7 @@ else:
             
 if Answer1 == "A":
     print("You find that there is a man waiting to ambush anyone that approaches the girl. He hasn't noticed you.")
-    Answer3 == (input("Options:\nA: Kill him\nB: Knock Him Out\nC: Leave\n"))
+    Answer3 = (input("Options:\nA: Kill him\nB: Knock Him Out\nC: Leave\n"))
     if (Answer3 == "A") | (Answer3 == "B") | (Answer3 == "C"):
         answer3true = True
     else:
