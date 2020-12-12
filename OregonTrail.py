@@ -180,7 +180,7 @@ while(blizzard == True):
 
 
 
-time.sleep(10)
+time.sleep(7)
 # Ubuntu version 10.10
 os.system('clear')
 
@@ -261,7 +261,7 @@ while(wolves == True):
       
       
 if car == False:
-    time.sleep(10)
+    time.sleep(7)
     # Ubuntu version 10.10
     os.system('clear')   
     supplies()
@@ -538,7 +538,7 @@ while Store == True:
              else: 
                  print("D: Leave now and go hunt")
              if car == True:
-                Answer2 = (input("A,B,C,D,E, F or G: "))
+                Answer2 = (input("A,B,C,D,E, F G or H: "))
                 answer2true = False
                 if (Answer2 == "A") | (Answer2 == "B") | (Answer2 == "C") | (Answer2 == "D") | (Answer2 == "E") | (Answer2 == "F") | (Answer2 == "G") | (Answer2 == "H"):
                     answer2true = True
@@ -625,7 +625,7 @@ while Store == True:
                  Store = False
                  
                  
-time.sleep(10)
+time.sleep(6)
 # Ubuntu version 10.10
 os.system('clear')
 
@@ -747,7 +747,7 @@ while(bandits == True):
 
 
 
-time.sleep(10)
+time.sleep(7)
 # Ubuntu version 10.10
 os.system('clear')
 
@@ -801,7 +801,7 @@ while(river == True):
              horse = False
          river = False
 
-time.sleep(10)
+time.sleep(6)
 # Ubuntu version 10.10
 os.system('clear')
 
@@ -831,7 +831,7 @@ else:
 
 
 
-time.sleep(10)
+time.sleep(6)
 # Ubuntu version 10.10
 os.system('clear')
 
@@ -909,7 +909,7 @@ elif Answer1 == "C":
     companion = False
     
 
-time.sleep(10)
+time.sleep(6)
 # Ubuntu version 10.10
 os.system('clear')
 
