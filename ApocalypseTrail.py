@@ -52,14 +52,12 @@ def keepgoin():
     else:
         answertrue = False
         while answertrue == False:
-            Answer1 = (input("Answer must be A, try again: "))
+            Answer = (input("Answer must be A, try again: "))
             if (Answer1 == "A"):
                 answertrue = True                  
     if Answer == "A":
-        print("Continue")
-        time.sleep(2)
-        # Ubuntu version 10.10
-        os.system('clear')
+        for i in range(20):
+            print()
 
 # for windows
 # os.system('cls')
