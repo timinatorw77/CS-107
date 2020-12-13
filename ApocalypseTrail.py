@@ -5,9 +5,10 @@ horse = False
 gun = True
 ammo = 20
 import sys
-from PIL import Image
+#from PIL import Image
 
 #read the image
+'''
 im = Image.open("IceWorld.jpg") # check
 im1 = Image.open("Wolves.jpg") #chech
 im2 = Image.open("Store.jpg") #check
@@ -20,7 +21,7 @@ im8 = Image.open("Crying-Child.jpg") #CHECK
 im9 = Image.open("FrozenRiver.jpg") #CHECK
 im10 = Image.open("Cabin.jpg") #CHECK
 im11 = Image.open("Farm.jpg") #Check
-        
+'''
 import os
 import time
 def supplies():
@@ -64,8 +65,9 @@ def keepgoin():
 # os.system('cls')
 
 #
+'''
 print("Would you like pictures to accompany the game?")
-Answer5 = (input("Options\nA: Yes\n B:No"))
+Answer5 = (input("Options\nA: Yes\nB: No\n"))
 if (Answer5 == "A") | (Answer5 == "B"):
         answertrue = True
 else:
@@ -81,7 +83,16 @@ elif Answer5 == "B":
 
 if pics == True:
     im.show()
+    '''
+pics = False   
     
+    
+    
+    
+    
+    
+    
+
 time.sleep(2)
         # Ubuntu version 10.10
 os.system('clear')
@@ -223,10 +234,9 @@ keepgoin()
 supplies()
 if car == False:
     print("While traveling south, you are startled by a pack of wolves about 100 yards from you. One notices you, so now you must decide your next course of action")
-    print("You know that the wolves are especially dangerous since there has been a mass migration of herbivores towards the equator, meaning that predators up north are starving and extremely dangerous for humans")
+    print("You know that the wolves are especially dangerous since there has been a mass migration of herbivores out of areas with extreme temperatures, meaning that predators up north are starving and extremely dangerous for humans")
     wolves = True
-    if pics == True:
-        im1.show()
+
 else: 
     wolves = False
 #Wolves Encounter
@@ -297,9 +307,9 @@ while(wolves == True):
       
 if car == False:
     keepgoin()
+    supplies()
 #Store Encounter
-if pics == True:
-    im2.show()
+
 print("You find that you are running out of food. You come across what looks like an abandoned Store")
 if horse == True:
     print("Your horse is starving as well, so it will need to be fed soon")
@@ -318,8 +328,7 @@ while(enter == True):
                      answertrue = True       
                      
          if Answer1 == "A":
-            if pics == True:
-                im3.show()
+            
             if car == True:
                 print("You exit the car and enter the store. You find a man living there, clearly a bit mad. You see he has amassed items from the store that could prove useful, including a bit of ammo. You NEED food and some gas")
             if horse == True:
@@ -335,16 +344,17 @@ while(enter == True):
                 print("You find that you do not have the ammo necessary to get a decent amount of meat, must make use of the store")
                 Store = True
                 enter = False
-             if pics == True:
-                 im7.show()
+             
              ammo = ammo - 3
              print("You manage to hunt for food, but are unable to find any plants, you do find animals to kill")
              if horse == True:
                  print("You cannot find any plants, so you are unable to feed your horse, and it soon dies of starvation")
+                 horse = False
                  Store = False
              if car == True:
                  print("Your car runs out of gas, so you must abandon it")
                  Store = False
+                 car = False
             
          enter = False
 
@@ -373,9 +383,10 @@ while Store == True:
              sys.exit("You Die. GAME OVER")
          elif Answer1 == "B":
             if car == True:
-                if ammo >= 8:
+                if ammo >= 10:
                      print("You speak with the man. He offers multiple deals.")
-                     print("Deal A: 8 bullets for a Weeks worth of food")
+                     
+                     print("Deal A: 10 bullets for a Weeks worth of food")
                      print("Deal B: Your gun and ammo for all the food you can carry and gas")
                      print("Deal C: The car for 20 bullets, a new rifle and all the food you can hold")
                      print("For personal choices, you can choose D to fight or E to run away")
@@ -391,7 +402,7 @@ while Store == True:
                                 answer2true = True
                      if Answer2 == "A":
                         print("You give him the 8 bullets and receive a weeks worth of food. You leave in peace. However, you are unable to gas your car. You are forced to abandon it")                        
-                        ammo = ammo - 8
+                        ammo = ammo - 10
                         horse = False
                      elif Answer2 == "B":
                         print("You give him the gun and ammo, and he is weirdly honest. You leave with your food in peace. You are now able to feed yourself and have gas for the car")
@@ -440,9 +451,9 @@ while Store == True:
                        sys.exit("You Die. GAME OVER")
                     Store = False
             if horse == True:
-             if ammo >= 8:
+             if ammo >= 10:
                      print("You speak with the man. He offers multiple deals.")
-                     print("Deal A: 8 bullets for a Weeks worth of food")
+                     print("Deal A: 10 bullets for a Weeks worth of food for yourself to scrap by, but not enough for your horse")
                      print("Deal B: Your gun and ammo for all the food you can carry and food for the horse")
                      print("Deal C: The Horse for 20 bullets, a new rifle and all the food you can hold")
                      print("For personal choices, you can choose D to fight or E to run away")
@@ -508,9 +519,9 @@ while Store == True:
                 Store = False
   
             else:
-                if ammo >= 8:
-                    print("Give him 8 bullets or your gun, and he will give you enough food to last a few weeks. Because he is senile he threatens to kill you if you don't barter with him")
-                    Answer2 = (input("A: Give Gun\nB: 8 Bullets\nC: Fight\nD: Run Away\n"))
+                if ammo >= 10:
+                    print("Give him 10 bullets or your gun, and he will give you enough food to last a few weeks. Because he is senile he threatens to kill you if you don't barter with him")
+                    Answer2 = (input("A: Give Gun\nB: 10 Bullets\nC: Fight\nD: Run Away\n"))
                     answer2true = False
                     if (Answer2 == "A") | (Answer2 == "B") | (Answer2 == "C") | (Answer2 == "D"):
                         answer2true = True
@@ -530,8 +541,10 @@ while Store == True:
                         print("You attempt to fight him. However, he has much better guns and knowledge of the turf than you. He defeats you")
                         sys.exit("You Die. GAME OVER")
                     elif Answer2 == "D":
-                        print("You run away. However, you don't even make it to the door and he guns you down. He only wounds you, but he takes all of your things, leaving you with no way to survive. You starve to death out in the frozen tundra")
-                        sys.exit("You Die. GAME OVER")
+                        print("You run away. However, you don't even make it to the door and he guns you down. He only wounds you, but he takes all of your things, leaving you with no way to survive. You barely manage to make a trap to feed yourself, and you are hanging onto life out in the tundra.")
+                        ammo = 0
+                        gun = False
+                        Store = False
                     gun = False
                     Store = False
                 else:
@@ -553,8 +566,10 @@ while Store == True:
                         print("You attempt to fight him. However, he has much better guns and knowledge of the turf than you. He defeats you")
                         sys.exit("You Die. GAME OVER")
                     elif Answer2 == "C":
-                        print("You run away. However, you don't even make it to the door and he guns you down. He only wounds you, but he takes all of your things, leaving you with no way to survive. You starve to death out in the frozen tundra")
-                        sys.exit("You Die. GAME OVER")
+                        print("You run away. However, you don't even make it to the door and he guns you down. He only wounds you, but he takes all of your things, leaving you with no way to survive. You barely manage to make a trap to feed yourself, and you are hanging onto life out in the tundra.")
+                        gun = False
+                        ammo = 0
+                        Store = False
 
          if Answer1 == "C":
              print("What would you like to steal? Food would be easiest, Gas would be medium while weapons would be hard")
@@ -669,10 +684,7 @@ print("During you travels, you are ambushed by a group of bandits. This is one o
 print("From reports you have heard on the radio, you know that they worship battle, as they believe that is the only way to appease their god, or else the Eternal Freeze will continue...")
 print("They surround you, and one massive man steps out unarmed from a car to fight you. What do you do?")
 bandits = True
-if pics == True:
-    im4.show()
-    im5.show()
-    im6.show()
+
 
 while(bandits == True):
          Answer1 = (input("How do you respond? \nA: Attempt to escape \nB: Fight\nC: Talk it out\n"))
@@ -735,7 +747,7 @@ while(bandits == True):
                      print("The bandit notices you try to use a knife and then uses his own weapon and easily decimates you. You are killed in seconds")
                      sys.exit("You Die. GAME OVER")
                  bandits = False
-         if Answer1 == "C":
+         elif Answer1 == "C":
              print("These people Don't talk. You are forced to fight.")
              Answer2 = (input("You now have to fight this person one on one. Will you \nA:Fight dirty, with weapons\nB: try to fight fair: "))
              answer2true = False
@@ -783,8 +795,7 @@ while(bandits == True):
 keepgoin()
 
 supplies()
-if pics == True:
-    im9.show()
+
 print("You now feel that the temperature is beginning to become more 'normal'.")
 print("You now come to a river that is frozen over. You cannot see how thick the freeze is, but it is going to be dangerous to cross.")
 river = True
@@ -826,7 +837,7 @@ while(river == True):
                  print("The huge amount of weight breaks through the ice. You fall through and are swept up in the current. You drown")
                  sys.exit("You Die. GAME OVER")
              else: 
-                 print("You cross on foot with no issue, bringing you supples with you")
+                 print("You cross on foot with no issue, bringing you supplies with you")
          elif Answer1 == "C":
              print("You succesfully cross, but abandon your most valuable resource to do so.")
              car = False
@@ -836,8 +847,7 @@ while(river == True):
 keepgoin()
 
 supplies()
-if pics == True:
-    im10.show()
+
 print("Now you are in the inhabitable areas. You notice that there is a crazy variety of animals.")
 print("It feels like everywhere you look there is something fighting something for space. Elk fighting moose, bobcats fighting lynx, coyotes fighting wolves. It feels like this apocalypse has brought the environment as well as society to an all out war for space")
 print("You also find what appears to be a battlefield, with big spots of ash and broken trees signalling that a significant conflict occured there.")
@@ -867,8 +877,6 @@ time.sleep(6)
 os.system('clear')
 
 supplies()
-if pics == True:
-    im8.show()
 print("During your travels, you encounter a lone child. The girl looks to be around 12 years old.")
 print("The child is alone and crying. You can examine the area around to check for traps if you would like, or you can just walk up to her, or you can run away.")
 Answer1 = (input("Options: \nA: Check \nB: Go right in\nC: Continue on\n"))
@@ -950,7 +958,7 @@ if companion == True:
     print("You have traveled with the girl and become quite attached to her. She has become almost like a daughter to you.")
 print("After about 2 weeks of travel, you see a small settlement. It appears to be a bastion of hope in these darker times. You see about 20 people moving around farming, ranching, etc.")
 print("Do You Approach?")
-Answer1 = (input("Optiosn:\nA: Approach\nB: Evade\n"))
+Answer1 = (input("Options:\nA: Approach\nB: Evade\n"))
 if (Answer1 == "A") | (Answer1 == "B"):
     answertrue = True
 else:
@@ -978,7 +986,7 @@ if Answer1 == "A":
     if FinalAnswer == "A":
         if companion == True:
             print("Now you must decide whether to leave the girl or bring her with you")
-            Answer2 = (input("Options:\nA: Bring Her\nB:Leave Her\n"))
+            Answer2 = (input("Options:\nA: Bring Her\nB: Leave Her\n"))
             if (Answer2 == "A") | (Answer2 == "B"):
                 answer2true = True
             else:
@@ -993,11 +1001,11 @@ if Answer1 == "A":
                 print("However, you are mortally wounded in a conflict with a group of savages. You die peacefully with her at your side")
                 sys.exit("You Win. Now try again to see what other endings you can come up with")
             if Answer2 == "B": 
-                print("ENDING: You go out alone, living out you life as a loan wanderer, never finding a place to settle down")
+                print("ENDING: You go out alone, living out you life as a lone wanderer, never finding a place to settle down")
                 print("You grow senile being alone for so long and you die 5 years later in in a minor scuffle with a settlement.")
                 sys.exit("You Win. Now try again to see what other endings you can come up with")
         else:
-            print("ENDING: You go out alone, living out you life as a loan wanderer, never finding a place to settle down")
+            print("ENDING: You go out alone, living out you life as a lone wanderer, never finding a place to settle down")
             print("You grow senile being alone for so long and you die 5 years later in in a minor scuffle with a settlement.")
             sys.exit("You Win. Now try again to see what other endings you can come up with")
     if FinalAnswer == "B":
@@ -1012,11 +1020,11 @@ if Answer1 == "A":
 else:
     if companion == True:
         print("You avoid the settlement live out your lives as a parent/daughter pair")
-        print("You live approximately 15 years, with the girl growing up the two of you traveling across North America. You live your life as a father figure to the child, wandering from place to place across North America")
-        print("However, you are mortally wounded in a conflict with a group of savages. You die peacefully with her at your side")
+        print("You live approximately 15 years. As the girl grows up the two of you travel across North America. You live your life as a father figure to the child, wandering from place to place across North America")
+        print("However, you are mortally wounded in a conflict with a group of savages and succumb to your wounds. You die peacefully with her at your side")
         sys.exit("You Win. Now try again to see what other endings you can come up with")
     else:
-        print("ENDING: You continue on alone, living out you life as a loan wanderer, never finding a place to settle down")
+        print("ENDING: You continue on alone, living out you life as a lone wanderer, never finding a place to settle down.")
         print("You grow senile being alone for so long and you die 5 years later in in a minor scuffle with a settlement.")
         sys.exit("You Win. Now try again to see what other endings you can come up with")
 '''  
