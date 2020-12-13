@@ -52,9 +52,9 @@ def keepgoin():
     else:
         answertrue = False
         while answertrue == False:
-            Answer = (input("Answer must be A, try again: "))
+            Answer1 = (input("Answer must be A, try again: "))
             if (Answer1 == "A"):
-                answertrue = True                     
+                answertrue = True                  
     if Answer == "A":
         print("Continue")
         time.sleep(2)
@@ -103,13 +103,11 @@ print("This apocalypse causes what is basically the breakdown of all government 
 print("In a sense, the sins of man have brought their own doom upon them. You are a person who lived in southern Alaska. Since the temperatures have gotten too low to live in, you must now travel south in order to survive.")
 print("Your decisions along the way will decide what path you take and whether you even survive.")
 Answer = (input("ENTER A TO CONTINUE\n"))
-
 while(this == False):
     if Answer == ("A"):
         answertrue = False
         Answer1 = (input("START - CHOOSE YOUR METHOD OF TRAVEL (Car, Horse, Foot)\n"))
-        while answertrue == False:
-            
+        while answertrue == False:          
             if (Answer1 == "Car") | (Answer1 == "Horse") | (Answer1 == "Foot"):
                 answertrue = True
             else: 
